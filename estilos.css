@@ -1,0 +1,96 @@
+/* Estilos Generales */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* --- Actividad 1: Cambiar color y tamaño del botón al hacer clic --- */
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.btn:active {
+    background-color: #2980b9;
+    transform: scale(0.95); /* Reduce el tamaño cuando se hace clic */
+}
+
+/* --- Actividad 2: Cambiar el color del cuadro en cada ciclo de animación --- */
+
+.cuadro {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    margin: 20px 0;
+    animation: moverDerecha 4s infinite; /* Animación continua */
+    transition: transform 0.3s ease; /* Añadimos la transición para el hover */
+}
+
+@keyframes moverDerecha {
+    0% {
+        transform: translateX(0);
+        background-color: #e74c3c; /* Rojo */
+    }
+    50% {
+        transform: translateX(200px);
+        background-color: #f39c12; /* Amarillo */
+    }
+    100% {
+        transform: translateX(0);
+        background-color: #2ecc71; /* Verde */
+    }
+}
+
+/* --- Actividad 3: Nueva animación para el texto --- */
+
+.texto-animado {
+    font-size: 24px;
+    font-weight: bold;
+    animation: girarYSubir 5s infinite; /* Animación infinita */
+}
+
+@keyframes girarYSubir {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    50% {
+        transform: rotate(180deg) translateY(-30px);
+    }
+    100% {
+        transform: rotate(360deg) translateY(0);
+    }
+}
+
+/* --- Actividad 4: Transición al hacer hover sobre el cuadro --- */
+
+.cuadro:hover {
+    transform: scale(5.2); /* Aumentar el tamaño del cuadro al pasar el cursor */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* --- Actividad 5: Cambiar la velocidad de la animación del texto --- */
+
+.texto-animado-rapido {
+    font-size: 24px;
+    font-weight: bold;
+    animation: girarYSubir 2s infinite; /* Animación más rápida */
+}
